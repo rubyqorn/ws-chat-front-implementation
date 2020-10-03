@@ -1,2 +1,2 @@
 # ws-chat-front-implementation
-Chat based on web sockets. Front implementation using Bottstrap 4, Vue js frameworks
+Chat based on web sockets. Front implementation using Bootstrap 4, Vue js frameworks

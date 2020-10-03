@@ -1,0 +1,45 @@
+{
+  "name": "ws-chat-front-implementation",
+  "version": "1.0.0",
+  "description": "Chat based on web sockets. Front implementation using Bottstrap 4, Vue js frameworks",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubyqorn/ws-chat-front-implementation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubyqorn/ws-chat-front-implementation/issues"
+  },
+  "homepage": "https://github.com/rubyqorn/ws-chat-front-implementation#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "css-loader": "^4.3.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "style-loader": "^1.2.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.5",
+    "vuex": "^3.5.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "postcss-loader": "^4.0.3",
+    "sass-loader": "^10.0.2",
+    "script-loader": "^0.7.2",
+    "vue-cli": "^2.9.6",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2"
+  }
+}
