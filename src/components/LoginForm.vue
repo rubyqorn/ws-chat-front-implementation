@@ -11,9 +11,9 @@
                     <input type="text" name="nickname" class="form-control" placeholder="Nickname">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-sm btn-outline-dark">
+                    <router-link to="/chat" class="btn btn-sm btn-outline-dark">
                         Login
-                    </button>
+                    </router-link>
                 </div>
             </form>
         </div>

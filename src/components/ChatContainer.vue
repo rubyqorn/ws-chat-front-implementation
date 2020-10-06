@@ -1,5 +1,5 @@
 <template>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center rounded">
         <div class="col-lg-7 bg-white p-3 mt-3 border shadow" id="chat-container">
             <div class="col-lg-10 p-2">
                 <div class="d-flex">
@@ -17,11 +17,17 @@
                 </div>
             </div>
         </div>
+        <message-form></message-form>
     </div>
 </template>
 
 <script>
+    import MessageForm from './MessageForm'
+    
     export default {
-        name: "ChatContainer"   
+        name: "ChatContainer",
+        components: {
+            MessageForm
+        }   
     }
 </script>
