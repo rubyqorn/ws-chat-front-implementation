@@ -13,12 +13,14 @@
     // Vue components
     import ChatContainer from './components/ChatContainer.vue'
     import MessageForm from './components/MessageForm.vue'
+    import LoginForm from './components/LoginForm.vue'
 
     export default {
         name: "App",
         components: {
             ChatContainer,
-            MessageForm
+            MessageForm,
+            LoginForm
         }
     }
 </script>
