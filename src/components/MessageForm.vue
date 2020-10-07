@@ -10,7 +10,7 @@
                 <textarea class="form-control" name="message" id="message"></textarea>
             </div>
             <div class="col-lg-1 p-1">
-                <router-link to="/send-message" class="btn btn-outline-dark btn-sm">
+                <router-link to="/chat" class="btn btn-outline-dark btn-sm">
                     Send
                 </router-link>
             </div>

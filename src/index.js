@@ -10,17 +10,13 @@ import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
 import Vue from 'vue'
-import Vuex from 'vuex'
-import VueRouter from 'vue-router'
 import App from './App.vue'
-import {routes} from './routes.js'
+import {Api} from './api.js'
+import {FakeApi} from './fake-api.js'
+import {store} from './vuex.js'
+import {router} from './routes.js'
 
 window.Vue = Vue;
-Vue.use(VueRouter);
-
-let router = new VueRouter({
-    routes
-});
 
 let app = new Vue({
     el: '#app',
