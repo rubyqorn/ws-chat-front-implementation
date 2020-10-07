@@ -5,10 +5,12 @@
                 <div class="form-group">
                     <label for="name" class="control-label text-muted">Name</label>
                     <input type="text" name="name" class="form-control" placeholder="John Doe">
+                    <span class="text-muted"><small>* min 3 symbols</small></span>
                 </div>
                 <div class="form-group">
                     <label for="nickname" class="control-label text-muted">Nickname</label>
                     <input type="text" name="nickname" class="form-control" placeholder="Nickname">
+                    <span class="text-muted"><small>* min 3 symbols</small></span>
                 </div>
                 <div class="form-group">
                     <router-link to="/chat" class="btn btn-sm btn-outline-dark">
