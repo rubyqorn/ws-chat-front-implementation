@@ -21,6 +21,7 @@ window.Vue = Vue;
 let app = new Vue({
     el: '#app',
     render: h => h(App),
-    router
+    router,
+    store
 })
 
