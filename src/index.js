@@ -15,8 +15,10 @@ import {Api} from './api.js'
 import {FakeApi} from './fake-api.js'
 import {store} from './vuex.js'
 import {router} from './routes.js'
+import Vuelidate from 'vuelidate';
 
 window.Vue = Vue;
+Vue.use(Vuelidate);
 
 let app = new Vue({
     el: '#app',
