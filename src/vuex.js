@@ -1,42 +1,53 @@
+import $ from 'jquery';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import {Api} from './api';
 import {FakeApi} from './fake-api'
 
-let api = new Api('http://test-domain.com/api/');
+let api = new Api('https://test-domain.com/api/');
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        name: null,
-        nickname: null
+        users: [],
+        currentUser: null
     },
     mutations: {
-        setUserName(state, name) {
-            state.name = name;
+        setUsers(state, usersList) {
+            state.users = usersList;
         },
-        setUserNickname(state, nickname) {
-            state.nickname = nickname;
+        setCurrentUser(state, user) {
+            state.currentUser = user;
         }
     },
     actions: {
+        loadUsersList({commit, state}) {
+            api.getUsersList((users) => {
+                commit('setUsers', users);
+            });
+        },
         loginUser({commit, state}, loginRequest) {
             api.login(
                 loginRequest, 
-                () => {
-                    commit('setUserName', loginRequest.name);
-                    commit('setUserNickname', loginRequest.nickname);
+                (user) => {
+                    commit('setCurrentUser', user);
                 },
                 () => {
-                    //
+                    // TODO: Handle failure
                 }
             );
         } 
     },
     getters: {
-        //
+        currentUser: state => {
+            return state.currentUser;
+        }
     }
 });
 
 export {store};
+
+$(document).ready(function() {
+    store.dispatch('loadUsersList');
+});

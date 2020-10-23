@@ -9,11 +9,11 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
-import Vue from 'vue'
-import App from './App.vue'
-import {Api} from './api.js'
-import {FakeApi} from './fake-api.js'
-import {store} from './vuex.js'
+import Vue from 'vue';
+import App from './App.vue';
+import {Api} from './api.js';
+import {FakeApi} from './fake-api.js';
+import {store} from './vuex.js';
 import {router} from './routes.js'
 import Vuelidate from 'vuelidate';
 
