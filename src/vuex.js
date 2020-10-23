@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import {Api} from './api';
@@ -9,24 +10,24 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        name: null,
-        nickname: null
+        users: []
     },
     mutations: {
-        setUserName(state, name) {
-            state.name = name;
-        },
-        setUserNickname(state, nickname) {
-            state.nickname = nickname;
+        setUsers(state, usersList) {
+            state.users = usersList;
         }
     },
     actions: {
+        loadUsersList({commit, state}) {
+            api.getUsersList((users) => {
+                commit('setUsers', users);
+            });
+        },
         loginUser({commit, state}, loginRequest) {
             api.login(
                 loginRequest, 
-                () => {
-                    commit('setUserName', loginRequest.name);
-                    commit('setUserNickname', loginRequest.nickname);
+                (users) => {
+                    //
                 },
                 () => {
                     //
@@ -40,3 +41,7 @@ const store = new Vuex.Store({
 });
 
 export {store};
+
+$(document).ready(function() {
+    store.dispatch('loadUsersList');
+});

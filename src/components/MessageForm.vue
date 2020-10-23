@@ -7,7 +7,7 @@
                 </button>
             </div>
             <div class="col-lg-10">
-                <textarea class="form-control" name="message" id="message"></textarea>
+                <textarea class="form-control" name="message" id="message" v-model="message"></textarea>
             </div>
             <div class="col-lg-1 p-1">
                 <router-link to="/chat" class="btn btn-outline-dark btn-sm">
