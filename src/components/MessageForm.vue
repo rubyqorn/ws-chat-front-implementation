@@ -20,6 +20,16 @@
 
 <script>
     export default {
-        name: "MessageForm"   
+        name: "MessageForm",
+        data() {
+            return {
+                message: null
+            }
+        },
+        methods: {
+            sendMessage() {
+                //
+            }
+        }  
     }
 </script>

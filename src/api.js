@@ -47,7 +47,9 @@ class Api {
                     return onFailure();
                 }
 
-                onSuccess();
+                onSuccess(
+                    new CurrentUser(loginRequest.name, loginRequest.nickname)
+                );
             })
     }
     sendMessage() {
