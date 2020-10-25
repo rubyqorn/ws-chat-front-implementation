@@ -1,10 +1,15 @@
 <template>
     <div class="row justify-content-center rounded">
         <div class="col-lg-7 bg-white p-3 mt-3 border shadow" id="chat-container">
-            <div class="col-lg-10 p-2">
+            <div class="col-lg-10 row justify-content-center" v-if="this.$store.getters.messagesList.length === 0">
+                <p class="text-center text-muted">
+                    Here empty. Type something...
+                </p>
+            </div>
+            <div class="col-lg-10 p-2" v-else v-for="message in this.$store.getters.messagesList" :key="message.id">
                 <div class="d-flex">
                     <p class="text-muted">
-                        <small class="font-weight-bold">Anton Hideger</small>
+                        <small class="font-weight-bold">{{message.nickname}}</small>
                     </p>
                     <p class="text-muted ml-2">
                         <small>12:10</small>
@@ -12,7 +17,7 @@
                 </div>
                 <div class="col-lg-12 p-0">
                     <small class="text-muted text-black-50">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda nobis officiis similique! Perferendis, nihil tempora! Placeat possimus blanditiis voluptatem delectus ipsum laboriosam dolorum voluptatibus quo expedita dolores assumenda, odit tempore quibusdam iure fugiat commodi et, sed obcaecati illo facere.
+                        {{message.message}}
                     </small>
                 </div>
             </div>
